@@ -1,16 +1,31 @@
-# React + Vite
+# Client — AI Content Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React 19 + Vite 8 + Tailwind v4 frontend. See the [root README](../README.md) for the full project overview, live demo, and architecture.
 
-Currently, two official plugins are available:
+## Scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev        # http://localhost:5173 (proxies /api to :5000)
+npm run build      # production bundle into dist/
+npm run preview    # serve dist/ locally
+npm run lint
+```
 
-## React Compiler
+## Environment
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Local dev needs no env vars — Vite proxies `/api` to `http://localhost:5000`. For production builds:
 
-## Expanding the ESLint configuration
+```
+VITE_API_URL=https://your-backend.up.railway.app
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+See [`.env.example`](./.env.example).
+
+## Structure
+
+- [src/api/](src/api/) — Axios instance, auth header injection, 429 response interceptor
+- [src/context/](src/context/) — `AuthContext`, `ThemeContext` (localStorage-persisted dark mode)
+- [src/components/](src/components/) — `Sidebar`, `ProtectedRoute`, layout pieces
+- [src/pages/](src/pages/) — `Dashboard`, `History`, `Login`, `Register`
+- [public/_redirects](public/_redirects) — SPA fallback for Cloudflare Pages
