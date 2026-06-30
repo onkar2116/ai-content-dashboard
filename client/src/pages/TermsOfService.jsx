@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 
 // ─── EDIT THESE before publishing ───────────────────────────────────────────
-const COMPANY_NAME = 'Marketing Analyst'
-const CONTACT_EMAIL = 'YOUR_CONTACT_EMAIL@example.com' // <-- change to your real contact email
+const COMPANY_NAME = 'AI Content Dashboard'
+const CONTACT_EMAIL = 'sagarbhagwat9511@gmail.com' // <-- change to your real contact email
 const WEBSITE = 'https://ai-content-dashboard-6dh.pages.dev'
 const EFFECTIVE_DATE = '30 June 2026' // <-- change if needed
 const JURISDICTION = 'India' // <-- change to your governing-law jurisdiction
