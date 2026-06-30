@@ -42,8 +42,8 @@ function Sidebar({ open, onClose }) {
               </svg>
             </div>
             <div>
-              <h1 className="text-lg font-bold text-gray-900 dark:text-white leading-tight">AI Content</h1>
-              <p className="text-xs text-gray-400 dark:text-gray-500">Dashboard</p>
+              <h1 className="text-lg font-bold text-gray-900 dark:text-white leading-tight">Marketing Analyst</h1>
+              <p className="text-xs text-gray-400 dark:text-gray-500">Reporting</p>
             </div>
           </div>
         </div>
